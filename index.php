@@ -1,5 +1,6 @@
 <?php require_once("includes/connection.php"); ?>
 <?php include("includes/header.php"); ?>
+<?php require_once("BuscarDados.php");?>
 
 <main>
   <div class="container">
@@ -18,20 +19,22 @@
           <thead>
             <tr>
               <th scope="col">Nome</th>
-              <th scope="col">Interesses</th>
               <th scope="col">Telefone</th>
               <th scope="col">E-mail</th>
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($variable as $key => $value) { ?>
-              <tr>
-                <th scope="row"><?= $nome; ?></th>
-                <td><?= $cursos; ?></td>
-                <td><?= $telefone; ?></td>
-                <td><?= $email; ?></td>
-              </tr>
-            <?php }?>
+            <?php
+              $res = BuscarDados();
+              
+              foreach($res as $value) {
+                echo '<tr>';
+                echo '<th scope="row">'.$value['nome'].'</th>';
+                echo      '<td>'.$value['telefone'].'</td>';
+                echo      '<td>'.$value['email'].'</td>';
+                echo '</tr>';
+              }
+            ?>
           </tbody>
         </table>
       </div>
