@@ -1,6 +1,6 @@
-	<footer class="my-5 pt-5 text-muted text-center text-small">
+	<footer class="col-md-12">
 		<hr />
-		<p class="mb-1">2019 © 7COMmcorp</p>
+		<p class="text-center">2019 © 7COMmcorp</p>
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
