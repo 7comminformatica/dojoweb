@@ -12,14 +12,17 @@ use App\PessoaInteresse;
 class usuarioController extends Controller
 {
     public function exibir(){
-        $pessoas = Pessoas::all();
+
+        $pessoas = Pessoa::all();
 
         foreach ($pessoas as $pessoa) {
-           $interesses = $pessoa->interesse();
+           $interesses = $pessoa->interesses();
            $pessoa->interesses = $interesses;
         }
 
-        return view('/',['pessoas' => $pessoas]);
+
+
+        return view('index')->with('pessoas',$pessoas);
     }
 
     

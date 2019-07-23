@@ -13,7 +13,7 @@ protected $table = 'pessoas';
 
 
 public function interesses() {
-    return $this->hasMany('App\PessoasInteresses');
+    return $this->hasMany('App\PessoaInteresse');
 }
 
 
